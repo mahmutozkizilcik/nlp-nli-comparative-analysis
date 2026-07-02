@@ -1,0 +1,27 @@
+# Pre-trained models and heavy weights (>100MB GitHub limit)
+/bert-base-uncased/
+*.safetensors
+*.bin
+*.h5
+*.pt
+*.pth
+*.ot
+
+# Scratch & debugging scripts
+/scratch/
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+*.log
+venv/
+env/
+.env
+
+# OS / IDE generated files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
