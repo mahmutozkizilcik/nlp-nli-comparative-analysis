@@ -2,7 +2,7 @@
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C.svg)](https://pytorch.org/)
-[![Transformers](https://img.shields.io/badge/%F0%9F%A4%97%20Transformers-4.35%2B-F7D54E.svg)](https://huggingface.co/docs/transformers/index)
+[![Transformers](https://img.shields.io/badge/Transformers-4.35%2B-F7D54E.svg)](https://huggingface.co/docs/transformers/index)
 [![Gemini API](https://img.shields.io/badge/Google%20Gemini-1.5%20Flash-4285F4.svg)](https://ai.google.dev/)
 
 An experimental Natural Language Processing (NLP) project exploring and comparing two distinct paradigms for **Natural Language Inference (NLI)** on the **Stanford Natural Language Inference (SNLI)** dataset:
@@ -11,7 +11,7 @@ An experimental Natural Language Processing (NLP) project exploring and comparin
 
 ---
 
-## 📊 Comparative Performance Summary
+## Comparative Performance Summary
 
 Both models were evaluated on sentence pairs from the SNLI dataset to classify relationships into **Entailment**, **Neutral**, or **Contradiction**.
 
@@ -20,7 +20,7 @@ Both models were evaluated on sentence pairs from the SNLI dataset to classify r
 | **Fine-Tuned Encoder** | `bert-base-uncased` | **85.30%** | **0.8519** | `0.00%` | Ultra-fast (~ms/batch), Local GPU/CPU | **Free** (post-training) |
 | **Zero-Shot Generative LLM** | `gemini-1.5-flash` | **93.20%** | **0.9324** | `0.00%` | Network API dependent (~2-3s/batch) | Pay-per-prompt |
 
-### 🔍 Key Findings
+### Key Findings
 * **Performance**: The zero-shot Gemini 1.5 Flash model achieved a remarkable **93.20% accuracy**, outperforming the fine-tuned BERT model (**85.30%**) significantly, demonstrating the advanced semantic reasoning capabilities of modern LLMs.
 * **Reliability & Parsing**: Through carefully structured batch prompting requesting strictly formatted JSON list outputs, the Gemini API achieved a **0% formatting error / invalid rate** across 1,000 test samples.
 * **Error Analysis**: Both models experienced the highest confusion around the **Neutral** class—a well-known challenge in NLI where distinguishing subtle nuances between logical entailment and neutral statements is difficult even for human annotators.
@@ -31,7 +31,7 @@ Both models were evaluated on sentence pairs from the SNLI dataset to classify r
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 ├── 2220765019.ipynb     # Full experimental notebook (EDA, BERT fine-tuning, Gemini evaluation & discussion)
@@ -46,7 +46,7 @@ Both models were evaluated on sentence pairs from the SNLI dataset to classify r
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Installation & Environment Setup
 Clone the repository and install the required Python packages:
@@ -73,7 +73,7 @@ genai.configure(api_key=API_KEY)
 
 ---
 
-## 🧪 Pipeline Methodology
+## Pipeline Methodology
 
 1. **Exploratory Data Analysis & Preprocessing**:
    * Analyzed premise and hypothesis token length distributions, class balance, and missing/invalid labels (`-1` labels removed).
@@ -88,5 +88,5 @@ genai.configure(api_key=API_KEY)
 
 ---
 
-## 📝 Academic Context
+## Academic Context
 This project was developed as part of the **AIN442 - Natural Language Processing / Deep Learning** course coursework at Hacettepe University.
